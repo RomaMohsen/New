@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Agency</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(to right, #1e40af, #7c3aed);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .hero {
+            background: url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+        .hero button {
+            background: #facc15;
+            border: none;
+            padding: 10px 20px;
+            color: black;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+        }
+        .listings, .services, .contact {
+            padding: 20px 0;
+        }
+        .listings .card, .services .card {
+            border: 1px solid #ddd;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+        .listings img, .services img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        footer {
+            background: linear-gradient(to right, #1e40af, #7c3aed);
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        form input, form textarea, form button {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        form input, form textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form button {
+            background: #1e40af;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Your Real Estate Agency</h1>
+        <nav>
+            <a href="#listings">Listings</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <div>
+            <h2>Find Your Dream Home</h2>
+            <p>Expert guidance to buy, sell, or rent with confidence.</p>
+            <button>Get Started</button>
+        </div>
+    </div>
+
+    <section id="listings" class="listings container">
+        <h3>Featured Listings</h3>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Property 1">
+            <div>
+                <h4>Property 1</h4>
+                <p>Beautiful location with modern amenities</p>
+                <p><strong>$500,000</strong></p>
+                <button>View Details</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services container">
+        <h3>Our Services</h3>
+        <div class="card">
+            <div>
+                <h4>Buying</h4>
+                <p>Expert advice to find the perfect property.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div>
+                <h4>Selling</h4>
+                <p>Strategic marketing for quick sales.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div>
+                <h4>Renting</h4>
+                <p>Wide selection of rental properties.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact container">
+        <h3>Get in Touch</h3>
+        <form action="contact.php" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Your Real Estate Agency. All rights reserved.</p>
+    </footer>
+</body>
+</html>
